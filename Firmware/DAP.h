@@ -206,7 +206,7 @@ extern void     DAP_Setup (void);
 
 // Configurable delay for clock generation
 #define DELAY_SLOW_CYCLES       3       // Number of cycles for one iteration
-static __forceinline void PIN_DELAY_SLOW (uint32_t delay) {
+static __INLINE void PIN_DELAY_SLOW (uint32_t delay) {
   volatile int32_t count;
 
   count = delay;
@@ -215,7 +215,7 @@ static __forceinline void PIN_DELAY_SLOW (uint32_t delay) {
 
 // Fixed delay for fast clock generation
 #define DELAY_FAST_CYCLES       0       // Number of cycles
-static __forceinline void PIN_DELAY_FAST (void) {
+static __INLINE void PIN_DELAY_FAST (void) {
 //__nop();
 }
 
