@@ -140,22 +140,22 @@ ICEJP2.9				GND			GND			GND
 */
 #define PIN_TCK_SWCLK_PORT		PC
 #define PIN_TCK_SWCLK_PIN		BIT9
-#define PIN_TCK_SWCLK_VALUE		PC9
+//#define PIN_TCK_SWCLK_VALUE		PC9
 #define PIN_TMS_SWDIO_PORT		PC
 #define PIN_TMS_SWDIO_PIN		BIT10
-#define PIN_TMS_SWDIO_VALUE		PC10
+//#define PIN_TMS_SWDIO_VALUE		PC10
 #define PIN_TDI_TXD_PORT		PB
 #define PIN_TDI_TXD_PIN			BIT1
-#define PIN_TDI_TXD_VALUE		PB1
+//#define PIN_TDI_TXD_VALUE		PB1
 #define PIN_TDO_RXD_PORT		PB
 #define PIN_TDO_RXD_PIN			BIT0
-#define PIN_TDO_RXD_VALUE		PB0
+//#define PIN_TDO_RXD_VALUE		PB0
 #define PIN_NTRST_PORT			PE
 #define PIN_NTRST_PIN			BIT5
-#define PIN_NTRST_VALUE			PE5
+//#define PIN_NTRST_VALUE			PE5
 #define PIN_NRESET_PORT			PC
 #define PIN_NRESET_PIN			BIT8
-#define PIN_NRESET_VALUE		PC8
+//#define PIN_NRESET_VALUE		PC8
 
 // Configure DAP I/O pins ------------------------------
 
@@ -209,21 +209,24 @@ static __INLINE void PORT_OFF (void) {
 \return Current status of the SWCLK/TCK DAP hardware I/O pin.
 */
 static __INLINE uint32_t PIN_SWCLK_TCK_IN  (void) {
-	return PIN_TCK_SWCLK_VALUE;
+	return (PIN_TCK_SWCLK_PORT->PIN & PIN_TCK_SWCLK_PIN) >> 9;
+	//return PIN_TCK_SWCLK_VALUE;
 }
 
 /** SWCLK/TCK I/O pin: Set Output to High.
 Set the SWCLK/TCK DAP hardware I/O pin to high level.
 */
 static __INLINE void     PIN_SWCLK_TCK_SET (void) {
-	PIN_TCK_SWCLK_VALUE = 1;
+	PIN_TCK_SWCLK_PORT->DOUT |= PIN_TCK_SWCLK_PIN;
+	//PIN_TCK_SWCLK_VALUE = 1;
 }
 
 /** SWCLK/TCK I/O pin: Set Output to Low.
 Set the SWCLK/TCK DAP hardware I/O pin to low level.
 */
 static __INLINE void     PIN_SWCLK_TCK_CLR (void) {
-	PIN_TCK_SWCLK_VALUE = 0;
+	PIN_TCK_SWCLK_PORT->DOUT &= ~PIN_TCK_SWCLK_PIN;
+	//PIN_TCK_SWCLK_VALUE = 0;
 }
 
 
@@ -233,28 +236,32 @@ static __INLINE void     PIN_SWCLK_TCK_CLR (void) {
 \return Current status of the SWDIO/TMS DAP hardware I/O pin.
 */
 static __INLINE uint32_t PIN_SWDIO_TMS_IN  (void) {
-	return PIN_TMS_SWDIO_VALUE;
+	return (PIN_TMS_SWDIO_PORT->PIN & PIN_TMS_SWDIO_PIN) >> 10;
+	//return PIN_TMS_SWDIO_VALUE;
 }
 
 /** SWDIO/TMS I/O pin: Set Output to High.
 Set the SWDIO/TMS DAP hardware I/O pin to high level.
 */
 static __INLINE void     PIN_SWDIO_TMS_SET (void) {
-	PIN_TMS_SWDIO_VALUE = 1;
+	PIN_TMS_SWDIO_PORT->DOUT |= PIN_TMS_SWDIO_PIN;
+	//PIN_TMS_SWDIO_VALUE = 1;
 }
 
 /** SWDIO/TMS I/O pin: Set Output to Low.
 Set the SWDIO/TMS DAP hardware I/O pin to low level.
 */
 static __INLINE void     PIN_SWDIO_TMS_CLR (void) {
-	PIN_TMS_SWDIO_VALUE = 0;
+	PIN_TMS_SWDIO_PORT->DOUT &= ~PIN_TMS_SWDIO_PIN;
+	//PIN_TMS_SWDIO_VALUE = 0;
 }
 
 /** SWDIO I/O pin: Get Input (used in SWD mode only).
 \return Current status of the SWDIO DAP hardware I/O pin.
 */
 static __INLINE uint32_t PIN_SWDIO_IN      (void) {
-    return PIN_TMS_SWDIO_VALUE;
+	return (PIN_TMS_SWDIO_PORT->PIN & PIN_TMS_SWDIO_PIN) >> 10;
+	//return PIN_TMS_SWDIO_VALUE;
 }
 
 /** SWDIO I/O pin: Set Output (used in SWD mode only).
@@ -262,9 +269,9 @@ static __INLINE uint32_t PIN_SWDIO_IN      (void) {
 */
 static __INLINE void     PIN_SWDIO_OUT     (uint32_t bit){
 	if (bit & 0x1)
-		PIN_TMS_SWDIO_VALUE = 1;
+		PIN_TMS_SWDIO_PORT->DOUT |= PIN_TMS_SWDIO_PIN;
 	else
-		PIN_TMS_SWDIO_VALUE = 0;
+		PIN_TMS_SWDIO_PORT->DOUT &= ~PIN_TMS_SWDIO_PIN;
 }
 
 /** SWDIO I/O pin: Switch to Output mode (used in SWD mode only).
@@ -290,7 +297,8 @@ static __INLINE void     PIN_SWDIO_OUT_DISABLE (void) {
 \return Current status of the TDI DAP hardware I/O pin.
 */
 static __INLINE uint32_t PIN_TDI_IN  (void) {
-	return PIN_TDI_TXD_VALUE;
+	return (PIN_TDI_TXD_PORT->PIN & PIN_TDI_TXD_PIN) >> 1;
+	//return PIN_TDI_TXD_VALUE;
 }
 
 /** TDI I/O pin: Set Output.
@@ -298,9 +306,9 @@ static __INLINE uint32_t PIN_TDI_IN  (void) {
 */
 static __INLINE void     PIN_TDI_OUT (uint32_t bit) {
 	if (bit & 0x1)
-		PIN_TDI_TXD_VALUE = 1;
+		PIN_TDI_TXD_PORT->DOUT |= PIN_TDI_TXD_PIN;
 	else
-		PIN_TDI_TXD_VALUE = 0;
+		PIN_TDI_TXD_PORT->DOUT &= ~PIN_TDI_TXD_PIN;
 }
 
 
@@ -310,7 +318,8 @@ static __INLINE void     PIN_TDI_OUT (uint32_t bit) {
 \return Current status of the TDO DAP hardware I/O pin.
 */
 static __INLINE uint32_t PIN_TDO_IN  (void) {
-	return PIN_TDO_RXD_VALUE;
+	return (PIN_TDO_RXD_PORT->PIN & PIN_TDO_RXD_PIN) >> 0;
+	//return PIN_TDO_RXD_VALUE;
 }
 
 
@@ -320,7 +329,8 @@ static __INLINE uint32_t PIN_TDO_IN  (void) {
 \return Current status of the nTRST DAP hardware I/O pin.
 */
 static __INLINE uint32_t PIN_nTRST_IN   (void) {
-	return PIN_NTRST_VALUE;
+	return (PIN_NTRST_PORT->PIN & PIN_NTRST_PIN) >> 5;
+	//return PIN_NTRST_VALUE;
 }
 
 /** nTRST I/O pin: Set Output.
@@ -330,9 +340,9 @@ static __INLINE uint32_t PIN_nTRST_IN   (void) {
 */
 static __INLINE void     PIN_nTRST_OUT  (uint32_t bit) {
 	if (bit & 0x1)
-		PIN_NTRST_VALUE = 1;
+		PIN_NTRST_PORT->DOUT |= PIN_NTRST_PIN;
 	else
-		PIN_NTRST_VALUE = 0;
+		PIN_NTRST_PORT->DOUT &= ~PIN_NTRST_PIN;
 }
 
 // nRESET Pin I/O------------------------------------------
@@ -341,7 +351,8 @@ static __INLINE void     PIN_nTRST_OUT  (uint32_t bit) {
 \return Current status of the nRESET DAP hardware I/O pin.
 */
 static __INLINE uint32_t PIN_nRESET_IN  (void) {
-    return PIN_NRESET_VALUE;
+	return (PIN_NRESET_PORT->PIN & PIN_NRESET_PIN) >> 5;
+    //return PIN_NRESET_VALUE;
 }
 
 /** nRESET I/O pin: Set Output.
@@ -351,9 +362,9 @@ static __INLINE uint32_t PIN_nRESET_IN  (void) {
 */
 static __INLINE void     PIN_nRESET_OUT (uint32_t bit) {
 	if (bit & 0x1)
-		PIN_NRESET_VALUE = 1;
+		PIN_NRESET_PORT->DOUT |= PIN_NRESET_PIN;
 	else
-		PIN_NRESET_VALUE = 0;
+		PIN_NRESET_PORT->DOUT &= ~PIN_NRESET_PIN;
 }
 
 ///@}
