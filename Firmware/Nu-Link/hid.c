@@ -151,19 +151,11 @@ void EP2_Handler(void)  /* Interrupt IN handler */
 void EP3_Handler(void)  /* Interrupt OUT handler */
 {
     uint8_t *ptr;
-    /* Interrupt OUT */
     ptr = (uint8_t *)(USBD_BUF_BASE + USBD_GET_EP_BUF_ADDR(EP3));
     HID_GetOutReport(ptr, USBD_GET_PAYLOAD_LEN(EP3));
     USBD_SET_PAYLOAD_LEN(EP3, EP3_MAX_PKT_SIZE);
 }
 
-
-/*--------------------------------------------------------------------------*/
-/**
-  * @brief  USBD Endpoint Config.
-  * @param  None.
-  * @retval None.
-  */
 void HID_Init(void)
 {
     /* Init setup packet buffer */
@@ -207,24 +199,24 @@ void HID_ClassRequest(void)
         // Device to host
         switch(buf[1])
         {
-            case GET_REPORT:
+        case GET_REPORT:
 //             {
 //                 break;
 //             }
-            case GET_IDLE:
+        case GET_IDLE:
 //             {
 //                 break;
 //             }
-            case GET_PROTOCOL:
+        case GET_PROTOCOL:
 //            {
 //                break;
 //            }
-            default:
-            {
-                /* Setup error, stall the device */
-                USBD_SetStall(0);
-                break;
-            }
+        default:
+        {
+            /* Setup error, stall the device */
+            USBD_SetStall(0);
+            break;
+        }
         }
     }
     else
@@ -232,39 +224,37 @@ void HID_ClassRequest(void)
         // Host to device
         switch(buf[1])
         {
-            case SET_REPORT:
+        case SET_REPORT:
+        {
+            if(buf[3] == 3)
             {
-                if(buf[3] == 3)
-                {
-                    /* Request Type = Feature */
-                    USBD_SET_DATA1(EP1);
-                    USBD_SET_PAYLOAD_LEN(EP1, 0);
-                }
-                break;
+                /* Request Type = Feature */
+                USBD_SET_DATA1(EP1);
+                USBD_SET_PAYLOAD_LEN(EP1, 0);
             }
-            case SET_IDLE:
-            {
-                /* Status stage */
-                USBD_SET_DATA1(EP0);
-                USBD_SET_PAYLOAD_LEN(EP0, 0);
-                break;
-            }
-            case SET_PROTOCOL:
+            break;
+        }
+        case SET_IDLE:
+        {
+            /* Status stage */
+            USBD_SET_DATA1(EP0);
+            USBD_SET_PAYLOAD_LEN(EP0, 0);
+            break;
+        }
+        case SET_PROTOCOL:
 //             {
 //                 break;
 //             }
-            default:
-            {
-                // Stall
-                /* Setup error, stall the device */
-                USBD_SetStall(0);
-                break;
-            }
+        default:
+        {
+            // Stall
+            /* Setup error, stall the device */
+            USBD_SetStall(0);
+            break;
+        }
         }
     }
 }
-
-
 
 
 static volatile uint8_t  USB_RequestFlag;       // Request  Buffer Usage Flag
@@ -280,67 +270,78 @@ static          uint8_t  USB_Request [DAP_PACKET_COUNT][DAP_PACKET_SIZE];  // Re
 static          uint8_t  USB_Response[DAP_PACKET_COUNT][DAP_PACKET_SIZE];  // Response Buffer
 
 
-void balabala_hid_init (void) {
-  USB_RequestFlag   = 0;
-  USB_RequestIn     = 0;
-  USB_RequestOut    = 0;
-  USB_ResponseIdle  = 1;
-  USB_ResponseFlag  = 0;
-  USB_ResponseIn    = 0;
-  USB_ResponseOut   = 0;
+void balabala_hid_init (void)
+{
+    USB_RequestFlag   = 0;
+    USB_RequestIn     = 0;
+    USB_RequestOut    = 0;
+    USB_ResponseIdle  = 1;
+    USB_ResponseFlag  = 0;
+    USB_ResponseIn    = 0;
+    USB_ResponseOut   = 0;
 }
 
 extern volatile uint8_t    DAP_TransferAbort;
 
 
+void byte_copy(uint8_t *d, uint8_t *s, uint32_t len)
+{
+    while (len--)
+    {
+        *d++ = *s++;
+    }
+}
+
 void HID_GetOutReport(uint8_t *buf, uint32_t len)
 {
-	if (len == 0) return;
-	
-  if (buf[0] == ID_DAP_TransferAbort) 
-  {
-	DAP_TransferAbort = 1;
-	return;
-  }
-    
-      if (USB_RequestFlag && (USB_RequestIn == USB_RequestOut)) 
-	  {
+    if (len == 0) return;
+
+    if (buf[0] == ID_DAP_TransferAbort)
+    {
+        DAP_TransferAbort = 1;
+        return;
+    }
+
+    if (USB_RequestFlag && (USB_RequestIn == USB_RequestOut))
+    {
         return;  // Discard packet when buffer is full
-      }
-  
-      // Store data into request packet buffer
-      memcpy(USB_Request[USB_RequestIn], buf, len);
-      USB_RequestIn++;
-      if (USB_RequestIn == DAP_PACKET_COUNT) {
+    }
+
+    // Store data into request packet buffer
+    byte_copy(USB_Request[USB_RequestIn], buf, len);
+    USB_RequestIn++;
+    if (USB_RequestIn == DAP_PACKET_COUNT)
+    {
         USB_RequestIn = 0;
-      }
-      if (USB_RequestIn == USB_RequestOut) {
+    }
+    if (USB_RequestIn == USB_RequestOut)
+    {
         USB_RequestFlag = 1;
-      }
-	
+    }
 }
 
 void HID_SetInReport(void)
 {
-	uint8_t *buf = (uint8_t *)(USBD_BUF_BASE + USBD_GET_EP_BUF_ADDR(EP2));
-	
-	  if ((USB_ResponseOut != USB_ResponseIn) || USB_ResponseFlag) 
-	  {
-		memcpy(buf, USB_Response[USB_ResponseOut], DAP_PACKET_SIZE);
-		USB_ResponseOut++;
-		if (USB_ResponseOut == DAP_PACKET_COUNT) 
-		{
-		  USB_ResponseOut = 0;
-		}
-		if (USB_ResponseOut == USB_ResponseIn) 
-		{
-		  USB_ResponseFlag = 0;
-		}
-		USBD_SET_PAYLOAD_LEN(EP2, EP2_MAX_PKT_SIZE);
-	  } else 
-	  {
-		USB_ResponseIdle = 1;
-	  }
+    uint8_t *buf = (uint8_t *)(USBD_BUF_BASE + USBD_GET_EP_BUF_ADDR(EP2));
+
+    if ((USB_ResponseOut != USB_ResponseIn) || USB_ResponseFlag)
+    {
+        byte_copy(buf, USB_Response[USB_ResponseOut], DAP_PACKET_SIZE);
+        USB_ResponseOut++;
+        if (USB_ResponseOut == DAP_PACKET_COUNT)
+        {
+            USB_ResponseOut = 0;
+        }
+        if (USB_ResponseOut == USB_ResponseIn)
+        {
+            USB_ResponseFlag = 0;
+        }
+        USBD_SET_PAYLOAD_LEN(EP2, EP2_MAX_PKT_SIZE);
+    }
+    else
+    {
+        USB_ResponseIdle = 1;
+    }
 }
 
 void usbd_hid_process (void)
@@ -368,11 +369,19 @@ void usbd_hid_process (void)
 
         if (USB_ResponseIdle)
         {
-            // Request that data is send back to host
+            uint8_t *buf = (uint8_t *)(USBD_BUF_BASE + USBD_GET_EP_BUF_ADDR(EP2));
             USB_ResponseIdle = 0;
+
+            byte_copy(buf, USB_Response[USB_ResponseIn], DAP_PACKET_SIZE);
+            USBD_SET_PAYLOAD_LEN(EP2, DAP_PACKET_SIZE);
+
+            // Request that data is send back to host
+
             //usbd_hid_get_report_trigger(0, USB_Response[USB_ResponseIn], DAP_PACKET_SIZE);
+
+
         }
-        //else
+        else
         {
             // Update response index and flag
             n = USB_ResponseIn + 1;

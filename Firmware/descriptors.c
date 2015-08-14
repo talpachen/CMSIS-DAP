@@ -116,6 +116,7 @@ uint8_t gu8ConfigDescriptor[] =
     1,     /* bInterval */
 };
 
+#if 0
 /*!<USB Language String Descriptor */
 uint8_t gu8StringLang[4] =
 {
@@ -155,6 +156,56 @@ const uint8_t *gpu8UsbString[4] =
     gu8ProductStringDesc,
     gu8StringSerial
 };
+#else
+/*!<USB Language String Descriptor */
+uint8_t gu8StringLang[4] =
+{
+    4,              /* bLength */
+    DESC_STRING,    /* bDescriptorType */
+    0x09, 0x04
+};
+
+/*!<USB Vendor String Descriptor */
+uint8_t gu8VendorStringDesc[] =
+{
+    10,
+    DESC_STRING,
+    'M', 0, 'B', 0, 'E', 0, 'D', 0
+};
+
+/*!<USB Product String Descriptor */
+uint8_t gu8ProductStringDesc[] =
+{
+    30,
+    DESC_STRING,
+    'M', 0, 'B', 0, 'E', 0, 'D', 0, ' ', 0, 'C', 0, 'M', 0, 'S', 0, 'I', 0, 'S', 0, '-', 0, 'D', 0, 'A', 0, 'P', 0
+};
+
+
+const uint8_t gu8StringSerial[26] =
+{
+    26,             // bLength
+    DESC_STRING,    // bDescriptorType
+    '0', 0, '0', 0, '0', 0, '1', 0, 'A', 0, '0', 0, '0', 0, '0', 0, '0', 0, '0', 0, '0', 0, '0', 0
+};
+
+uint8_t gu8HidSerial[] =
+{
+    30,
+    DESC_STRING,
+    'M', 0, 'B', 0, 'E', 0, 'D', 0, ' ', 0, 'C', 0, 'M', 0, 'S', 0, 'I', 0, 'S', 0, '-', 0, 'D', 0, 'A', 0, 'P', 0
+};
+
+
+const uint8_t *gpu8UsbString[5] =
+{
+    gu8StringLang,
+    gu8VendorStringDesc,
+    gu8ProductStringDesc,
+    gu8StringSerial,	
+    gu8HidSerial
+};
+#endif
 
 const S_USBD_INFO_T gsInfo =
 {

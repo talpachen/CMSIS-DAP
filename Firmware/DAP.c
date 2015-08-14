@@ -24,7 +24,10 @@
 #include "DAP_config.h"
 #include "DAP.h"
 
-
+#define DAP_VENDOR              "ARM"
+#define DAP_PRODUCT             "CMSIS-DAP"
+#define DAP_SER_NUM             "00000000"
+	 
 #define DAP_FW_VER      "1.0"   // Firmware Version
 
 

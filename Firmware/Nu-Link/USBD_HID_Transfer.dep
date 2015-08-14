@@ -2,50 +2,26 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>3201370491</fileChecksum>
+  <fileChecksum>615170535</fileChecksum>
   <configuration>
     <name>Release</name>
     <outputs>
       <file>$PROJ_DIR$\CMSIS\core_cmFunc.h</file>
       <file>$PROJ_DIR$\CMSIS\core_cm0.h</file>
       <file>$PROJ_DIR$\CMSIS\core_cmInstr.h</file>
+      <file>$PROJ_DIR$\CMSIS\core_sc000.h</file>
+      <file>$PROJ_DIR$\CMSIS\core_sc300.h</file>
       <file>$PROJ_DIR$\CMSIS\NUC100Series.h</file>
       <file>$PROJ_DIR$\CMSIS\startup_NUC100Series.s</file>
       <file>$PROJ_DIR$\CMSIS\system_NUC100Series.c</file>
       <file>$PROJ_DIR$\CMSIS\system_NUC100Series.h</file>
       <file>$PROJ_DIR$\..\DAP.c</file>
       <file>$PROJ_DIR$\..\DAP.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
-      <file>$PROJ_DIR$\Release\Obj\SW_DP.o</file>
-      <file>$PROJ_DIR$\Release\Obj\SW_DP.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\DAP.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\DAP.o</file>
-      <file>$PROJ_DIR$\Release\Obj\JTAG_DP.o</file>
-      <file>$PROJ_DIR$\Release\Obj\JTAG_DP.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-      <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
-      <file>$PROJ_DIR$\Release\Obj\system_NUC100Series.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$PROJ_DIR$\USBD_HID_Transfer.icf</file>
-      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
-      <file>$TOOLKIT_DIR$\lib\rt6M_tl.a</file>
-      <file>$TOOLKIT_DIR$\lib\dl6M_tlf.a</file>
-      <file>$PROJ_DIR$\Release\Obj\gpio.o</file>
-      <file>$PROJ_DIR$\Release\Obj\sys.o</file>
-      <file>$PROJ_DIR$\Release\Obj\retarget.o</file>
-      <file>$PROJ_DIR$\Release\Obj\clk.o</file>
-      <file>$PROJ_DIR$\Release\Obj\fmc.o</file>
-      <file>$PROJ_DIR$\Release\Obj\timer.o</file>
-      <file>$PROJ_DIR$\Release\Obj\uart.o</file>
-      <file>$PROJ_DIR$\Release\Obj\usbd.o</file>
-      <file>$PROJ_DIR$\Release\Obj\clk.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\fmc.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\gpio.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\retarget.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\sys.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\timer.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\uart.pbi</file>
       <file>$PROJ_DIR$\Release\Obj\usbd.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\timer.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\uart.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\usbd.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\hid.__cstat.et</file>
       <file>$PROJ_DIR$\StdDriver\inc\fmc.h</file>
       <file>$PROJ_DIR$\StdDriver\inc\i2c.h</file>
       <file>$PROJ_DIR$\StdDriver\inc\i2s.h</file>
@@ -69,11 +45,48 @@
       <file>$PROJ_DIR$\Release\Obj\usb_config.pbi</file>
       <file>$PROJ_DIR$\Release\Obj\hid.pbi</file>
       <file>$PROJ_DIR$\Release\Obj\hid.o</file>
-      <file>$PROJ_DIR$\Release\Obj\usbd_NUC12x.pbi</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
       <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$PROJ_DIR$\Release\Obj\usbd_NUC12x.pbi</file>
       <file>$TOOLKIT_DIR$\inc\c\string.h</file>
       <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$PROJ_DIR$\..\hid_transfer.c</file>
+      <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\..\main.c</file>
+      <file>$PROJ_DIR$\Release\Obj\descriptors.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\hid_transfer.pbi</file>
+      <file>$PROJ_DIR$\Release\Exe\USBD_HID_Transfer.bin</file>
+      <file>$PROJ_DIR$\Release\Obj\descriptors.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\main.o</file>
+      <file>$PROJ_DIR$\Release\Obj\hid_transfer.o</file>
+      <file>$PROJ_DIR$\Release\Obj\USBD_HID_Transfer.pbd</file>
+      <file>$PROJ_DIR$\Release\Obj\main.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\Release\Obj\descriptors.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\Release\Exe\USBD_HID_Transfer.out</file>
+      <file>$PROJ_DIR$\Release\Obj\hid_transfer.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\startup_NUC100Series.o</file>
+      <file>$PROJ_DIR$\Release\Obj\system_NUC100Series.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\Release\Obj\system_NUC100Series.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\DAP.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\JTAG_DP.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\SW_DP.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\clk.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$PROJ_DIR$\usb_config.c</file>
+      <file>$PROJ_DIR$\usbd_NUC12x.c</file>
+      <file>$PROJ_DIR$\Release\Obj\SW_DP.o</file>
+      <file>$PROJ_DIR$\Release\Obj\SW_DP.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\DAP.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\DAP.o</file>
       <file>$PROJ_DIR$\..\descriptors.c</file>
       <file>$PROJ_DIR$\..\JTAG_DP.c</file>
       <file>$PROJ_DIR$\..\SW_DP.c</file>
@@ -89,54 +102,42 @@
       <file>$PROJ_DIR$\hid.c</file>
       <file>$PROJ_DIR$\hid.h</file>
       <file>$PROJ_DIR$\main.c</file>
-      <file>$PROJ_DIR$\usb_config.c</file>
       <file>$PROJ_DIR$\usb_hid.h</file>
-      <file>$PROJ_DIR$\usbd_NUC12x.c</file>
-      <file>$PROJ_DIR$\..\hid_transfer.c</file>
-      <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\..\main.c</file>
-      <file>$PROJ_DIR$\Release\Exe\USBD_HID_Transfer.bin</file>
-      <file>$PROJ_DIR$\Release\Obj\descriptors.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\USBD_HID_Transfer.pbd</file>
-      <file>$PROJ_DIR$\Release\Obj\hid_transfer.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\main.__cstat.et</file>
-      <file>$PROJ_DIR$\Release\Obj\main.o</file>
-      <file>$PROJ_DIR$\Release\Obj\descriptors.__cstat.et</file>
-      <file>$PROJ_DIR$\Release\Obj\hid_transfer.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-      <file>$PROJ_DIR$\Release\Obj\descriptors.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$PROJ_DIR$\Release\Exe\USBD_HID_Transfer.out</file>
-      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-      <file>$PROJ_DIR$\Release\Obj\hid_transfer.__cstat.et</file>
-      <file>$PROJ_DIR$\Release\Obj\startup_NUC100Series.o</file>
-      <file>$PROJ_DIR$\Release\Obj\system_NUC100Series.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-      <file>$PROJ_DIR$\Release\Obj\JTAG_DP.__cstat.et</file>
-      <file>$PROJ_DIR$\Release\Obj\system_NUC100Series.__cstat.et</file>
-      <file>$PROJ_DIR$\Release\Obj\DAP.__cstat.et</file>
-      <file>$PROJ_DIR$\Release\Obj\SW_DP.__cstat.et</file>
-      <file>$PROJ_DIR$\Release\Obj\clk.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\JTAG_DP.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+      <file>$PROJ_DIR$\Release\Obj\JTAG_DP.o</file>
+      <file>$PROJ_DIR$\Release\Obj\system_NUC100Series.o</file>
+      <file>$PROJ_DIR$\USBD_HID_Transfer.icf</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
+      <file>$TOOLKIT_DIR$\lib\rt6M_tl.a</file>
+      <file>$TOOLKIT_DIR$\lib\dl6M_tlf.a</file>
+      <file>$PROJ_DIR$\Release\Obj\gpio.o</file>
+      <file>$PROJ_DIR$\Release\Obj\sys.o</file>
+      <file>$PROJ_DIR$\Release\Obj\retarget.o</file>
+      <file>$PROJ_DIR$\Release\Obj\clk.o</file>
+      <file>$PROJ_DIR$\Release\Obj\fmc.o</file>
+      <file>$PROJ_DIR$\Release\Obj\timer.o</file>
+      <file>$PROJ_DIR$\Release\Obj\uart.o</file>
+      <file>$PROJ_DIR$\Release\Obj\usbd.o</file>
+      <file>$PROJ_DIR$\Release\Obj\clk.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\fmc.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\gpio.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\retarget.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\sys.pbi</file>
       <file>$PROJ_DIR$\Release\Obj\fmc.__cstat.et</file>
       <file>$PROJ_DIR$\Release\Obj\gpio.__cstat.et</file>
-      <file>$PROJ_DIR$\Release\Obj\retarget.__cstat.et</file>
       <file>$PROJ_DIR$\Release\Obj\sys.__cstat.et</file>
-      <file>$PROJ_DIR$\Release\Obj\timer.__cstat.et</file>
-      <file>$PROJ_DIR$\Release\Obj\uart.__cstat.et</file>
-      <file>$PROJ_DIR$\Release\Obj\usbd.__cstat.et</file>
-      <file>$PROJ_DIR$\Release\Obj\hid.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\retarget.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\timer.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\uart.pbi</file>
     </outputs>
     <file>
       <name>$PROJ_DIR$\CMSIS\startup_NUC100Series.s</name>
       <outputs>
         <tool>
           <name>AARM</name>
-          <file> 104</file>
+          <file> 62</file>
         </tool>
       </outputs>
     </file>
@@ -144,22 +145,26 @@
       <name>$PROJ_DIR$\CMSIS\system_NUC100Series.c</name>
       <outputs>
         <tool>
-          <name>ICCARM</name>
-          <file> 18</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 105</file>
+          <file> 63</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 112</file>
+          <file> 69</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 100</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
+          <name>BICOMP</name>
+          <file> 16 55 57 17 20 59 5 68 64 65 66 67 21 22 19 18 23 2 58 102 24 25 26 27 28 29 30 31 32 33 34 35 1 8 0</file>
+        </tool>
+        <tool>
           <name>ICCARM</name>
-          <file> 102 97 110 99 108 109 106 107 3 1 2 101 19 0 6 45 48 40 44 41 49 46 50 51 43 52 53 54 42 55 56 47 57 58 59</file>
+          <file> 59 55 68 57 66 67 64 65 5 1 2 58 102 0 8 21 24 16 20 17 25 22 26 27 19 28 29 30 18 31 32 23 33 34 35</file>
         </tool>
       </inputs>
     </file>
@@ -167,26 +172,26 @@
       <name>$PROJ_DIR$\..\DAP.c</name>
       <outputs>
         <tool>
-          <name>ICCARM</name>
-          <file> 13</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 12</file>
+          <file> 79</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 113</file>
+          <file> 70</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 80</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICCARM</name>
-          <file> 66 97 110 99 108 109 106 107 65 64 79 3 1 102 2 101 19 0 6 45 48 40 44 41 49 46 50 51 43 52 53 54 42 55 56 47 57 58 59 8 16</file>
+          <name>BICOMP</name>
+          <file> 28 33 58 29 8 0 67 68 24 27 32 35 98 92 64 65 66 55 5 25 26 30 31 34 1 42 10 40 39 57 21 16 20 17 22 19 18 23 59 2 102</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 109 51 56 110 48 59 79 52 53 57 6 0 101 16 8 106 107 108 97 3 49 50 54 55 58 1 66 65 64 99 45 40 44 41 46 43 42 47 102 2 19</file>
+          <name>ICCARM</name>
+          <file> 42 55 68 57 66 67 64 65 40 39 92 5 1 59 2 58 102 0 8 21 24 16 20 17 25 22 26 27 19 28 29 30 18 31 32 23 33 34 35 10 98</file>
         </tool>
       </inputs>
     </file>
@@ -195,399 +200,24 @@
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 100</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\descriptors.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 98</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 90</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 95</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 3 1 102 97 110 99 108 109 106 107 2 101 19 0 6 45 48 40 44 41 49 46 50 51 43 52 53 54 42 55 56 47 57 58 59 84</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 46 43 47 2 97 45 42 84 40 44 41 99 55 48 49 50 51 52 53 54 56 57 58 59 102 101 19 3 1 6 0 110 106 107 108 109</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\JTAG_DP.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 14</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 15</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 111</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 79 3 1 102 97 110 99 108 109 106 107 2 101 19 0 6 45 48 40 44 41 49 46 50 51 43 52 53 54 42 55 56 47 57 58 59 8 16 65</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 108 41 40 44 42 110 8 45 46 43 47 2 106 107 79 3 48 49 50 51 102 109 101 16 52 53 54 55 56 57 58 59 1 6 0 97 99 19 65</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\SW_DP.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 10</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 11</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 114</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 79 3 1 102 97 110 99 108 109 106 107 2 101 19 0 6 45 48 40 44 41 49 46 50 51 43 52 53 54 42 55 56 47 57 58 59 8 16 65</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 40 108 41 44 110 45 46 43 42 47 2 106 107 8 3 48 49 50 51 52 53 54 55 56 102 109 101 16 79 57 58 59 1 6 0 97 99 19 65</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\StdDriver\src\clk.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 27</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 32</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 115</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 3 1 102 97 110 99 108 109 106 107 2 101 19 0 6 45 48 40 44 41 49 46 50 51 43 52 53 54 42 55 56 47 57 58 59</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 45 97 42 99 46 43 47 40 44 41 2 3 48 49 50 51 52 53 54 55 56 57 58 59 102 101 19 1 6 0 110 106 107 108 109</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\StdDriver\src\fmc.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 28</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 116</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 9 97 110 99 108 109 106 107 65 67 3 1 102 2 101 19 0 6 45 48 40 44 41 49 46 50 51 43 52 53 54 42 55 56 47 57 58 59</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 55 67 97 49 58 1 9 110 50 54 3 65 99 48 51 52 53 56 57 59 6 0 101 19 106 107 108 109 45 40 44 41 46 43 42 47 102 2</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\StdDriver\src\gpio.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 24</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 34</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 117</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 3 1 102 97 110 99 108 109 106 107 2 101 19 0 6 45 48 40 44 41 49 46 50 51 43 52 53 54 42 55 56 47 57 58 59</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 48 59 97 51 56 99 52 53 57 49 50 54 55 58 2 45 40 44 41 46 43 42 47 102 101 19 3 1 6 0 110 106 107 108 109</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\StdDriver\src\retarget.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 26</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 35</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 118</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 9 97 110 99 108 109 106 107 65 67 3 1 102 2 101 19 0 6 45 48 40 44 41 49 46 50 51 43 52 53 54 42 55 56 47 57 58 59</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 55 97 49 58 1 65 50 54 110 3 67 99 48 51 52 53 56 57 59 6 0 101 19 9 106 107 108 109 45 40 44 41 46 43 42 47 102 2</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\StdDriver\src\sys.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 25</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 36</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 119</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 3 1 102 97 110 99 108 109 106 107 2 101 19 0 6 45 48 40 44 41 49 46 50 51 43 52 53 54 42 55 56 47 57 58 59</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 54 97 50 99 49 55 58 48 51 52 53 56 57 59 2 45 40 44 41 46 43 42 47 102 101 19 3 1 6 0 110 106 107 108 109</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\StdDriver\src\timer.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 29</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 37</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 120</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 3 1 102 97 110 99 108 109 106 107 2 101 19 0 6 45 48 40 44 41 49 46 50 51 43 52 53 54 42 55 56 47 57 58 59</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 55 49 58 1 50 54 110 109 101 48 51 52 53 56 57 59 6 0 106 107 108 45 40 44 41 46 43 42 47 102 2 97 99 19 3</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\StdDriver\src\uart.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 30</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 38</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 121</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 9 97 110 99 108 109 106 107 65 67 3 1 102 2 101 19 0 6 45 48 40 44 41 49 46 50 51 43 52 53 54 42 55 56 47 57 58 59</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 55 97 49 58 1 3 65 50 54 110 9 67 99 48 51 52 53 56 57 59 6 0 101 19 106 107 108 109 45 40 44 41 46 43 42 47 102 2</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\StdDriver\src\usbd.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 31</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 39</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 122</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 9 97 110 99 108 109 106 107 65 67 66 64 3 1 102 2 101 19 0 6 45 48 40 44 41 49 46 50 51 43 52 53 54 42 55 56 47 57 58 59</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 97 59 48 51 56 67 99 110 64 52 53 57 6 0 101 19 9 66 65 49 50 54 55 58 1 3 106 107 108 109 45 40 44 41 46 43 42 47 102 2</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\hid.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 62</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 61</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 123</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 66 97 110 99 108 109 106 107 65 64 3 1 102 2 101 19 0 6 45 48 40 44 41 49 46 50 51 43 52 53 54 42 55 56 47 57 58 59 79 8 16 81</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 97 40 41 110 81 64 44 102 79 65 99 45 46 43 42 47 2 101 19 3 16 8 55 106 107 108 109 48 49 50 51 52 53 54 56 57 58 59 1 6 0 66</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\main.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 94</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 87</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 93</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 9 97 110 99 108 109 106 107 65 67 3 1 102 2 101 19 0 6 45 48 40 44 41 49 46 50 51 43 52 53 54 42 55 56 47 57 58 59 79 8 16 81</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 48 59 51 56 81 97 109 110 52 53 57 6 0 101 79 65 106 107 108 49 50 54 55 58 1 16 3 8 67 99 45 40 44 41 46 43 42 47 102 2 19 9</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\usb_config.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
           <file> 60</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\usbd_NUC12x.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 63</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 83</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\hid_transfer.c</name>
       <outputs>
         <tool>
-          <name>ICCARM</name>
-          <file> 96</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 92</file>
+          <file> 48</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 103</file>
+          <file> 61</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 52</file>
         </tool>
       </outputs>
     </file>
@@ -595,16 +225,16 @@
       <name>$PROJ_DIR$\..\main.c</name>
       <outputs>
         <tool>
-          <name>ICCARM</name>
-          <file> 94</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 87</file>
+          <file> 45</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 93</file>
+          <file> 54</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 51</file>
         </tool>
       </outputs>
     </file>
@@ -613,13 +243,388 @@
       <outputs>
         <tool>
           <name>OBJCOPY</name>
-          <file> 89</file>
+          <file> 49</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 20 27 13 98 28 24 62 14 94 26 104 10 25 18 29 30 31 21 22 17 23</file>
+          <file> 101 109 80 56 110 106 38 99 51 108 62 77 107 100 111 112 113 104 103 105</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\usb_config.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 36</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\usbd_NUC12x.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 41</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 75</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\descriptors.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 47</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 50</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 56</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 27 32 24 35 2 55 28 29 33 96 25 26 30 31 34 57 21 16 20 17 22 19 18 23 59 58 102 5 1 8 0 68 64 65 66 67</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 5 1 59 55 68 57 66 67 64 65 2 58 102 0 8 21 24 16 20 17 25 22 26 27 19 28 29 30 18 31 32 23 33 34 35 96</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\JTAG_DP.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 97</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 71</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 99</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 66 17 16 20 18 68 10 21 22 19 23 2 64 65 92 5 24 25 26 27 59 67 58 98 28 29 30 31 32 33 34 35 1 8 0 55 57 102 40</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 92 5 1 59 55 68 57 66 67 64 65 2 58 102 0 8 21 24 16 20 17 25 22 26 27 19 28 29 30 18 31 32 23 33 34 35 10 98 40</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\SW_DP.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 78</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 72</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 77</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 16 66 17 20 68 21 22 19 18 23 2 64 65 10 5 24 25 26 27 28 29 30 31 32 59 67 58 98 92 33 34 35 1 8 0 55 57 102 40</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 92 5 1 59 55 68 57 66 67 64 65 2 58 102 0 8 21 24 16 20 17 25 22 26 27 19 28 29 30 18 31 32 23 33 34 35 10 98 40</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\StdDriver\src\clk.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 114</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 73</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 109</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 55 18 57 22 19 23 16 20 17 2 5 24 25 26 27 28 29 30 31 32 33 34 35 59 58 102 1 8 0 68 64 65 66 67</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 5 1 59 55 68 57 66 67 64 65 2 58 102 0 8 21 24 16 20 17 25 22 26 27 19 28 29 30 18 31 32 23 33 34 35</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\StdDriver\src\fmc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 115</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 119</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 110</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 31 43 55 25 34 1 74 68 26 30 5 40 57 24 27 28 29 32 33 35 8 0 58 102 64 65 66 67 21 16 20 17 22 19 18 23 59 2</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 74 55 68 57 66 67 64 65 40 43 5 1 59 2 58 102 0 8 21 24 16 20 17 25 22 26 27 19 28 29 30 18 31 32 23 33 34 35</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\StdDriver\src\gpio.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 116</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 120</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 106</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 24 35 55 27 32 57 28 29 33 25 26 30 31 34 2 21 16 20 17 22 19 18 23 59 58 102 5 1 8 0 68 64 65 66 67</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 5 1 59 55 68 57 66 67 64 65 2 58 102 0 8 21 24 16 20 17 25 22 26 27 19 28 29 30 18 31 32 23 33 34 35</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\StdDriver\src\retarget.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 117</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 122</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 108</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 31 55 25 34 1 40 26 30 68 5 43 57 24 27 28 29 32 33 35 8 0 58 102 74 64 65 66 67 21 16 20 17 22 19 18 23 59 2</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 74 55 68 57 66 67 64 65 40 43 5 1 59 2 58 102 0 8 21 24 16 20 17 25 22 26 27 19 28 29 30 18 31 32 23 33 34 35</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\StdDriver\src\sys.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 118</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 121</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 107</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 30 55 26 57 25 31 34 24 27 28 29 32 33 35 2 21 16 20 17 22 19 18 23 59 58 102 5 1 8 0 68 64 65 66 67</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 5 1 59 55 68 57 66 67 64 65 2 58 102 0 8 21 24 16 20 17 25 22 26 27 19 28 29 30 18 31 32 23 33 34 35</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\StdDriver\src\timer.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 123</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 12</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 111</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 31 25 34 1 26 30 68 67 58 24 27 28 29 32 33 35 8 0 64 65 66 21 16 20 17 22 19 18 23 59 2 55 57 102 5</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 5 1 59 55 68 57 66 67 64 65 2 58 102 0 8 21 24 16 20 17 25 22 26 27 19 28 29 30 18 31 32 23 33 34 35</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\StdDriver\src\uart.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 124</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 13</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 112</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 31 55 25 34 1 5 40 26 30 68 74 43 57 24 27 28 29 32 33 35 8 0 58 102 64 65 66 67 21 16 20 17 22 19 18 23 59 2</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 74 55 68 57 66 67 64 65 40 43 5 1 59 2 58 102 0 8 21 24 16 20 17 25 22 26 27 19 28 29 30 18 31 32 23 33 34 35</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\StdDriver\src\usbd.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 14</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 113</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 55 35 24 27 32 43 57 68 39 28 29 33 8 0 58 102 74 42 40 25 26 30 31 34 1 5 64 65 66 67 21 16 20 17 22 19 18 23 59 2</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 74 55 68 57 66 67 64 65 40 43 42 39 5 1 59 2 58 102 0 8 21 24 16 20 17 25 22 26 27 19 28 29 30 18 31 32 23 33 34 35</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\hid.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 37</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 15</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 38</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 29 8 0 64 94 68 65 28 33 58 66 55 24 27 32 35 92 67 25 26 30 31 34 1 98 5 10 40 39 57 21 16 20 17 22 19 18 23 59 2 102 42</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 42 55 68 57 66 67 64 65 40 39 5 1 59 2 58 102 0 8 21 24 16 20 17 25 22 26 27 19 28 29 30 18 31 32 23 33 34 35 92 10 98 94</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 45</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 54</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 51</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 24 35 27 32 94 55 67 68 28 29 33 8 0 58 92 40 64 65 66 25 26 30 31 34 1 98 5 10 43 57 21 16 20 17 22 19 18 23 59 2 102 74</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 74 55 68 57 66 67 64 65 40 43 5 1 59 2 58 102 0 8 21 24 16 20 17 25 22 26 27 19 28 29 30 18 31 32 23 33 34 35 92 10 98 94</file>
         </tool>
       </inputs>
     </file>

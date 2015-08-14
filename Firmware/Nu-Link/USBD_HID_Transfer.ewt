@@ -1140,13 +1140,7 @@
       <name>$PROJ_DIR$\main.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\usb_config.c</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\usb_hid.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\usbd_NUC12x.c</name>
     </file>
   </group>
 </project>
